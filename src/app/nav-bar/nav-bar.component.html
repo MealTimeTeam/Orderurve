@@ -6,7 +6,7 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
-    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-toolbar class="navColor">Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/home-page">Home Page</a>
       <a mat-list-item href="/editor-page">Editor</a>
@@ -15,7 +15,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <router-outlet></router-outlet>
-    <mat-toolbar color="primary">
+    <mat-toolbar class="navColor">
       <button
         type="button"
         aria-label="Toggle sidenav"
