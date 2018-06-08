@@ -11,12 +11,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { EditorPageComponent } from './editor-page/editor-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
-
+import { UserLoginComponent } from './users/user-login/user-login.component';
+import { UserProfileComponent } from './users/user-profile/user-profile.component';
+import { CoreModule } from './core/core.module';
+// firebase modules
+import { AngularFireAuthModule } from 'angularfire2/auth';
 const appRoutes: Routes = [
   {path: 'home-page', component: HomePageComponent},
   {path: 'editor-page', component: EditorPageComponent},
   {path: 'settings-page', component: SettingsPageComponent}
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +29,9 @@ const appRoutes: Routes = [
     HomePageComponent,
     EditorPageComponent,
     SettingsPageComponent,
-    NavBarComponent
+    NavBarComponent,
+    UserLoginComponent,
+    UserProfileComponent,
   ],
 
   imports: [
@@ -37,7 +44,8 @@ const appRoutes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    CoreModule
 
   ],
   providers: [],
